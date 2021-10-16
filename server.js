@@ -19,16 +19,16 @@ app.use("/api", api);
 
 app.use(express.static('public'));
 
-
-// //wildcard route directs users to the index.html page
-// app.get("*", (req, res) => 
-//     res.sendFile(path.join(__dirname,"/public/index.html"))
-// );
-
 // GET route for notes page
 app.get("/notes", (req, res) =>
     res.sendFile(path.join(__dirname, "/public/notes.html"))
 );
+
+//wildcard route directs users to the index.html page
+app.get("*", (req, res) => 
+    res.sendFile(path.join(__dirname,"/public/index.html"))
+);
+
 
 app.listen(PORT, () => 
     console.log(`App listening @ http://localhost:${PORT} 🚀`)

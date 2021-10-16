@@ -10,6 +10,7 @@ notes.get("/", (req, res) => {
     );
 });
 
+// POST route for new notes to be added to the database
 notes.post("/", (req, res) => {
 
     //destructure the note object passed in 
@@ -27,6 +28,20 @@ notes.post("/", (req, res) => {
         res.error("Error in adding note :/");
     }
 
+});
+
+// DELETE route for existing notes to be deleted from the database
+notes.delete("/:note_id", (req,res) => {
+    const noteId = req.params.note_id;
+    readFromFile("./db/db.json")
+    .then((data) => JSON.parse(data))
+    .then((json) => {
+        const result = json.filter((note) => note.note_id !== noteId);
+
+        writeToFile("./db/db.json", result);
+
+        res.json(`Note ID ${noteId} has been deleted 🗑️`);
+    });
 });
 
 module.exports = notes;

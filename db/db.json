@@ -4,13 +4,8 @@
         "text": "Test text"
     },
     {
-        "title": "hi there",
-        "text": "general kenobi\n",
-        "note_id": "8e7f3bac-cf5b-4a10-a531-baf11170391e"
-    },
-    {
-        "title": "hi there",
-        "text": "general",
-        "note_id": "e57532a8-6b12-43dd-8651-edaaa9765713"
+        "title": "Topics for Dennis",
+        "text": "1. deleting a note\n2. Deploying live on Heroku",
+        "note_id": "710b3326-c0fd-45e8-8bd8-cc71f6ea6fdd"
     }
 ]
