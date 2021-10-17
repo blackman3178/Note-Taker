@@ -1,11 +1,12 @@
 [
     {
-        "title": "Test Title",
-        "text": "Test text"
+        "title": "HI there",
+        "text": "noah",
+        "id": "6bde48e2-ae1b-477c-86bb-82861d9e20b6"
     },
     {
-        "title": "Topics for Dennis",
-        "text": "1. deleting a note\n2. Deploying live on Heroku",
-        "note_id": "710b3326-c0fd-45e8-8bd8-cc71f6ea6fdd"
+        "title": "HI there",
+        "text": "Dennis",
+        "id": "8efe9f8b-541a-4411-a3fe-cf78e88630d2"
     }
 ]

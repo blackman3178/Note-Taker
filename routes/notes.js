@@ -20,7 +20,7 @@ notes.post("/", (req, res) => {
         const newNote = {
             title,
             text,
-            note_id: uuidv4(),
+            id: uuidv4(),
         };
         readAndAppend(newNote, "./db/db.json");
         res.json("Note added successfully!🚀");
@@ -36,8 +36,7 @@ notes.delete("/:note_id", (req,res) => {
     readFromFile("./db/db.json")
     .then((data) => JSON.parse(data))
     .then((json) => {
-        const result = json.filter((note) => note.note_id !== noteId);
-
+        const result = json.filter( note => note.id !== noteId);
         writeToFile("./db/db.json", result);
 
         res.json(`Note ID ${noteId} has been deleted 🗑️`);
